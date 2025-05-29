@@ -58,7 +58,7 @@ function createHeart() {
   heart.classList.add('emoji');
   heart.innerText = '❤️';
 
-  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.left = Math.random() * window.innerWidth + 'px';
   heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
   heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
 
