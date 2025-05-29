@@ -52,6 +52,7 @@ toggleBtn.addEventListener('click', () => {
 });
 
 
+
 function createHeart() {
   const heart = document.createElement('div');
   heart.classList.add('emoji');
@@ -70,3 +71,4 @@ function createHeart() {
 
 
 setInterval(createHeart, 100);
+
