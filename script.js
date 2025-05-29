@@ -50,3 +50,23 @@ toggleBtn.addEventListener('click', () => {
     toggleBtn.textContent = '▶️';
   }
 });
+
+
+function createHeart() {
+  const heart = document.createElement('div');
+  heart.classList.add('emoji');
+  heart.innerText = '❤️';
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+  heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+  document.getElementById('emoji-container').appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+
+setInterval(createHeart, 100);
