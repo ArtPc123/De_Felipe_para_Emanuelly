@@ -38,27 +38,13 @@ setInterval(atualizarContador, 1000);
 
 
 
-const audio = document.getElementById('music-player');
-const toggleBtn = document.getElementById('toggle-btn');
-
-toggleBtn.addEventListener('click', () => {
-  if (audio.paused) {
-    audio.play();
-    toggleBtn.textContent = '⏸️';
-  } else {
-    audio.pause();
-    toggleBtn.textContent = '▶️';
-  }
-});
-
-
 
 function createHeart() {
   const heart = document.createElement('div');
   heart.classList.add('emoji');
-  heart.innerText = '❤️';
+  heart.innerText = '🌸';
 
-  heart.style.left = Math.random() * window.innerWidth + 'px';
+  heart.style.left = Math.random() * 100 + 'vw';
   heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
   heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
 
@@ -69,5 +55,9 @@ function createHeart() {
   }, 5000);
 }
 
+
 setInterval(createHeart, 100);
+
+
+
 
