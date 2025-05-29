@@ -62,60 +62,33 @@ body {
   max-width: 600px;
 }
 #music-card {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 4vw;
-  background: linear-gradient(to right, #111, #222);
-  color: white;
-  border-radius: 16px; 
-  margin: 4vw;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-  position: relative;
+  position: fixed;         
+  top: 10px;               
+  left: 50%;               
+  transform: translateX(-50%); 
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;           
+  width: 90vw;             
+  max-width: 80vw;        
 }
 
 
-#music-cover {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-#music-card .info {
-  flex: 1;
-}
-
-#music-card h3,
-#music-card p {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-}
-
-#toggle-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-#emoji-container { 
+#emoji-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Garantir largura real da tela */
-  height: 100vh; /* Garantir altura real da tela */
-  pointer-events: none; /* deixa a chuva passar sem atrapalhar clique */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
   overflow: hidden;
   z-index: 9999;
 }
 
 .emoji {
   position: absolute;
-  left: 0; /* Ponto de partida para aplicar style.left no JS */
-  top: 0;
   font-size: 24px;
   animation: fall 4s linear forwards;
 }
@@ -130,4 +103,3 @@ body {
     opacity: 0;
   }
 }
-
